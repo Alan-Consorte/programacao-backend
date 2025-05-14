@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Aula06Condicional",
+            "request": "launch",
+            "mainClass": "com.mycompany.Aula06Condicional",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Avaliacao04",
+            "request": "launch",
+            "mainClass": "com.mycompany.Avaliacao04",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Avaliacao03",
+            "request": "launch",
+            "mainClass": "com.mycompany.Avaliacao03",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Avaliacao02",
+            "request": "launch",
+            "mainClass": "com.mycompany.Avaliacao02",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Avaliacao01",
+            "request": "launch",
+            "mainClass": "com.mycompany.Avaliacao01",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "avaliaçãoBackeEnd",
+            "request": "launch",
+            "mainClass": "com.mycompany.avaliaçãoBackeEnd",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "provabackend",
+            "request": "launch",
+            "mainClass": "com.provabackend",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "Aula01Variaveis",
             "request": "launch",
             "mainClass": "com.mycompany.Aula01Variaveis",
