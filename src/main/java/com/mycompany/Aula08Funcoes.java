@@ -11,7 +11,14 @@ public class Aula08Funcoes {
         }
     }
 
+    /**
+     * Não podemos declarar funções dentro de outra função
+     * 
+     * Toda função deve ter um retorno, quando não há retorno utilizado void.
+     * 
+     * Uma função pode não ter parâmetros, ou ter 1 ou mais.
+     */
     public static int multiplicacao(int num, int num2) {
         return num * num2;
+
     }
-}

@@ -1,6 +1,6 @@
-package com.mycompany.av
+package com.mycompany
 
-public class Avaliacao02 {
+public class Avaliacao01 {
     public static void main(String[] args) {
         double areaCirculo = 25; // cm²
         double piValor = Math.PI; // ou use 3.14

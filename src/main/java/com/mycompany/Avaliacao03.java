@@ -1,6 +1,6 @@
 package com.mycompany.avaliac;
 
-public class Avaliacao04 {
+public class Avaliacao03 {
     public static void main(String[] args) {
         double precoInicial = 850.00;
         double percentualCorte = 30.0;
