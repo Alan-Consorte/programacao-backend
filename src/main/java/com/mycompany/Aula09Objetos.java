@@ -22,8 +22,15 @@ public class Aula09Objetos {
         numero.compareTo(numero2);
 
         // Instânciando uma classe
-        Carro carro = new Carro(modelo: "Celta", marca: "chevrolet");
-        carro.andar(km: 60);
+        Carro carro = new Carro("Celta", "chevrolet");
+        carro.andar(60);
+       
+        Carro carro2 = new Carro( "Celta",  "Chevrolet");
+
+        System.out.println(carro == carro2);
+
+        System.out.println(carro instanceof Carro);
+        System.out.println(carro instanceof Object);
     }
 
     /*
@@ -54,6 +61,11 @@ public class Aula09Objetos {
         void andar(int km) {
             this.quilometragem += km;
             System.out.println("O carro está percorrendo " + km + "km");
+
+        }
+
+        void parar() {
+            System.out.println("O veículo parou !! e percorreu um total de " + this.quilometragem + "Km");
         }
     }
 }
