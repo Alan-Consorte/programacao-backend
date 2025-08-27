@@ -1,0 +1,85 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ContaBancaria {
+    private int numero;
+    private String titular;
+    private double saldo;
+    private List<String> extrato;
+
+    public ContaBancaria(int numero, String titular) {
+        this.numero = numero;
+        this.titular = titular;
+        this.saldo = 0.0;
+        this.extrato = new ArrayList<>();
+        this.extrato.add("Conta criada com sucesso.");
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            this.extrato.add("Depósito de R$ " + String.format("%.2f", valor));
+            System.out.println("Depósito de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
+    }
+
+    public boolean sacar(double valor) {
+        if (valor > 0 && valor <= this.saldo) {
+            this.saldo -= valor;
+            this.extrato.add("Saque de R$ " + String.format("%.2f", valor));
+            System.out.println("Saque de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
+            return true;
+        } else {
+            System.out.println("Saque inválido. Verifique o valor ou o saldo disponível.");
+            return false;
+        }
+    }
+
+    public boolean transferir(double valor, ContaBancaria destino) {
+        if (this.sacar(valor)) {
+            destino.depositar(valor);
+            this.extrato.add("Transferência de R$ " + String.format("%.2f", valor) + " para a conta " + destino.getNumero());
+            System.out.println("Transferência realizada com sucesso para a conta " + destino.getTitular() + ".");
+            return true;
+        } else {
+            System.out.println("Transferência não pôde ser realizada.");
+            return false;
+        }
+    }
+
+    public boolean fecharConta() {
+        if (this.saldo == 0) {
+            System.out.println("Conta encerrada com sucesso.");
+            return true;
+        } else {
+            System.out.println("Não é possível fechar a conta. Saldo deve ser zero.");
+            return false;
+        }
+    }
+
+    public void mostrarSaldo() {
+        System.out.println("Saldo da conta " + this.numero + ": R$ " + String.format("%.2f", this.saldo));
+    }
+
+    public void mostrarExtrato() {
+        System.out.println("\n--- Extrato da Conta " + this.numero + " ---");
+        for (String operacao : this.extrato) {
+            System.out.println("- " + operacao);
+        }
+        System.out.println("------------------------------------");
+    }
+}
